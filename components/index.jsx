@@ -316,14 +316,14 @@ export default function Home() {
                     {item.lockInMassage}
                   </span>
                 </div>
-                <div className="w-full bg-[#5b6391] hover:bg-[#F69174] text-center py-[10px] px-5 rounded-xl mt-5">
+                <Link href="plan" className="w-full bg-[#5b6391] hover:bg-[#F69174] text-center py-[10px] px-5 rounded-xl mt-5">
                   <div className="uppercase text-lg font-bold leading-[27px] text-white">
                     {item.button}
                   </div>
                   <div className="text-[15px] leading-[22.5px] text-white">
                     {item.buttonPrice}
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
