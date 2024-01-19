@@ -64,9 +64,9 @@ export default function Login() {
                 <span className="text-[#b49da5]">Keep me logged in</span>
               </div>
             </div>
-            <Link href="/" className="text-[#949bc2] underline">
+            <button className="text-[#949bc2] underline" onClick={() => router.push("/")}>
               Forgot password?
-            </Link>
+            </button>
           </div>
           <div className="flex flex-col space-y-8">
             <div className="flex flex-col space-y-2">
