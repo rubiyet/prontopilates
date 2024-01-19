@@ -103,50 +103,41 @@ export default function Register() {
                     onChange={(e) => setContact(e.target.value)}
                     className="border-b border-[#d8d5d8] py-3 px-3 focus:outline-none text-[#330f2f] placeholder:text-[#aea1ac]"
                   />
-                  <div className="flex items-center justify-between">
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      placeholder="Password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="border-b border-[#d8d5d8] w-full py-3 px-3 focus:outline-none text-[#330f2f] placeholder:text-[#aea1ac]"
-                    />
-                    <div className="flex flex-col space-y-8">
-                      <div className="flex flex-col space-y-4">
-                        <div className="flex items-center">
-                          <button
-                            className="text-[#b49da5] focus:outline-none text-lg"
-                            onClick={() => setShowPassword(!showPassword)}
-                          >
-                            {showPassword ? <FaEyeSlash /> : <FaEye />}
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <input
-                      type={showConfirmPassword ? "text" : "password"}
-                      placeholder="Repeat Password"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      className="border-b border-[#d8d5d8] w-full py-3 px-3 focus:outline-none text-[#330f2f] placeholder:text-[#aea1ac]"
-                    />
-                    <div className="flex flex-col space-y-8">
-                      <div className="flex flex-col space-y-4">
-                        <div className="flex items-center">
-                          <button
-                            className="text-[#b49da5] focus:outline-none text-lg"
-                            onClick={() =>
-                              setShowConfirmPassword(!showConfirmPassword)
-                            }
-                          >
-                            {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="flex items-center justify-between">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="border-b border-[#d8d5d8] w-full py-3 px-3 focus:outline-none text-[#330f2f] placeholder:text-[#aea1ac]"
+                />
+                <div className="flex items-center h-full border-b border-[#d8d5d8]">
+                  <button
+                    className="text-[#b49da5] focus:outline-none text-lg"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <input
+                  type={showConfirmPassword ? "text" : "password"}
+                  placeholder="Repeat Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="border-b border-[#d8d5d8] w-full py-3 px-3 focus:outline-none text-[#330f2f] placeholder:text-[#aea1ac]"
+                />
+                <div className="flex items-center h-full border-b border-[#d8d5d8]">
+                  <button
+                    className="text-[#b49da5] focus:outline-none text-lg"
+                    onClick={() =>                               setShowConfirmPassword(!showConfirmPassword)
+                    }
+                  >
+                    {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
+              </div>
                   <div className="text-[13px] text-[#b5a8b3] space-y-5">
                     <span className="">
                       Password must be at least 8 characters in length with:

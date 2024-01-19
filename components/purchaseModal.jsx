@@ -85,7 +85,7 @@ export default function PurchaseModal({
             </div>
             <hr className="border-[#eae7ea]" />
           </div>
-          <button className="bg-[#5b6391] text-white rounded-md py-3 px-4 flex justify-between items-center text-lg" onClick={() => router.push("/")}>
+          <button className="bg-[#5b6391] text-white rounded-md py-3 px-4 flex justify-between items-center text-lg" onClick={() => router.push("/login")}>
             <span>Purchase</span> <FaAngleRight />
           </button>
           <div className="p-6">

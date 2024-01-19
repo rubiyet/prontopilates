@@ -45,7 +45,7 @@ export default function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   className="border-b border-[#d8d5d8] w-full py-3 px-3 focus:outline-none text-[#330f2f] placeholder:text-[#aea1ac]"
                 />
-                <div className="flex items-center">
+                <div className="flex items-center h-full border-b border-[#d8d5d8]">
                   <button
                     className="text-[#b49da5] focus:outline-none text-lg"
                     onClick={() => setShowPassword(!showPassword)}
@@ -64,7 +64,7 @@ export default function Login() {
                 <span className="text-[#b49da5]">Keep me logged in</span>
               </div>
             </div>
-            <button className="text-[#949bc2] underline" onClick={() => router.push("/")}>
+            <button className="text-[#949bc2] underline flex" onClick={() => router.push("/")}>
               Forgot password?
             </button>
           </div>
