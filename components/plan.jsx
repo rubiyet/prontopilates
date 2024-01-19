@@ -82,7 +82,7 @@ export default function Plan() {
                 checked={reformer === "yes"}
                 onChange={(e) => setReformer(e.target.value)}
               />
-              <label for="yes" className="text-[#595D64]">
+              <label htmlFor="yes" className="text-[#595D64]">
                 Yes
               </label>
             </div>
@@ -93,7 +93,7 @@ export default function Plan() {
                 checked={reformer === "no"}
                 onChange={(e) => setReformer(e.target.value)}
               />
-              <label for="no" className="text-[#595D64]">
+              <label htmlFor="no" className="text-[#595D64]">
                 No
               </label>
             </div>
@@ -175,7 +175,7 @@ export default function Plan() {
                       checked={roaming === "yes"}
                       onChange={(e) => setRoaming(e.target.value)}
                     />
-                    <label for="yes" className="text-[#595D64] text-sm">
+                    <label htmlFor="yes" className="text-[#595D64] text-sm">
                       Yes
                     </label>
                   </div>
@@ -186,7 +186,7 @@ export default function Plan() {
                       checked={roaming === "no"}
                       onChange={(e) => setRoaming(e.target.value)}
                     />
-                    <label for="no" className="text-[#595D64] text-sm">
+                    <label htmlFor="no" className="text-[#595D64] text-sm">
                       No
                     </label>
                   </div>
@@ -232,7 +232,6 @@ export default function Plan() {
                  <span>for 50% off your first month.</span><FaAnglesLeft /></span>
               <span className="text-[#595D64] text-xs text-center">
               (Plus Founding Member perks valued at $300+)
-
 </span>
               </div>
               <span className="text-[#595D64] text-xs text-center">
