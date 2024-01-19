@@ -1,8 +1,7 @@
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import { FaAngleRight } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
-import { useRouter } from "next/router";
-import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 export default function Login() {
@@ -78,9 +77,9 @@ export default function Login() {
               </span>
             </div>
             <div className="flex justify-between">
-              <Link href="/register" className="bg-[#5b6391] text-white rounded-md py-2.5 px-5 flex items-center text-lg space-x-3">
+              <button className="bg-[#5b6391] text-white rounded-md py-2.5 px-5 flex items-center text-lg space-x-3" onClick={() => router.push("/register")}>
                 <span>Register</span> <FaAngleRight />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { FaAngleRight } from "react-icons/fa6";
-import { useRouter } from "next/router";
 import { useState } from "react";
+import { useRouter } from "next/router";
+import { FaAngleRight } from "react-icons/fa6";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { GrStatusGood } from "react-icons/gr";
@@ -202,9 +201,9 @@ export default function Register() {
                   />
                   <span className="text-[#b49da5] space-x-1">
                     <span>I agree to</span>
-                    <Link href="/" className="text-[#949bc2] underline">
+                    <button className="text-[#949bc2] underline" onClick={() => router.push("/")}>
                       Terms and conditions
-                    </Link>
+                    </button>
                   </span>
                 </div>
                 <div className="flex justify-end">

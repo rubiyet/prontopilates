@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import PurchaseModal from "./purchaseModal";
-import { useEffect } from "react";
+import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
 
 export default function Plan() {
+  const route = useRouter();
   const [reformer, setReformer] = useState();
   const [studio, setStudio] = useState();
   const [roaming, setRoaming] = useState();
@@ -228,7 +228,8 @@ export default function Plan() {
               <div className="text-[#595D64] flex flex-col">
               <span className="font-bold space-x-2 flex items-center">
                 <FaAnglesRight />
-                <Link href="/" className="underline bg-[#FFFF00] text-[#0000EE]">PRE-REGISTER HERE</Link>
+                <button href="/" className="underline bg-[#FFFF00] text-[#0000EE]" onClick={() => route.push("/")}>
+                  PRE-REGISTER HERE</button>
                  <span>for 50% off your first month.</span><FaAnglesLeft /></span>
               <span className="text-[#595D64] text-xs text-center">
               (Plus Founding Member perks valued at $300+)
