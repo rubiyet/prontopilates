@@ -3,9 +3,8 @@ import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { FaCreditCard } from "react-icons/fa";
 
-
-
 export default function EditCard() {
+  
   const router = useRouter();
   const [cardNumber, setCardNumber] = useState();
   const [cardExpiry, setCardExpiry] = useState("");

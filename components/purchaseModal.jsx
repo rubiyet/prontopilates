@@ -6,7 +6,9 @@ export default function PurchaseModal({
   showPurchaseModal,
   setShowPurchaseModal,
 }) {
+
   const router = useRouter();
+  
   return (
     <div
       className={`fixed inset-0 bg-gray-600 bg-opacity-80 justify-center items-center flex ${

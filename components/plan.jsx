@@ -5,6 +5,7 @@ import PurchaseModal from "./purchaseModal";
 import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
 
 export default function Plan() {
+  
   const route = useRouter();
   const [reformer, setReformer] = useState();
   const [studio, setStudio] = useState();

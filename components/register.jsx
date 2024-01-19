@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import { GrStatusGood } from "react-icons/gr";
 
 export default function Register() {
+  
   const router = useRouter();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
