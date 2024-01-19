@@ -64,7 +64,7 @@ export default function Login() {
                 <span className="text-[#b49da5]">Keep me logged in</span>
               </div>
             </div>
-            <Link href="/forgot-password" className="text-[#949bc2] underline">
+            <Link href="/" className="text-[#949bc2] underline">
               Forgot password?
             </Link>
           </div>
@@ -78,9 +78,9 @@ export default function Login() {
               </span>
             </div>
             <div className="flex justify-between">
-              <button className="bg-[#5b6391] text-white rounded-md py-2.5 px-5 flex items-center text-lg space-x-3">
+              <Link href="/register" className="bg-[#5b6391] text-white rounded-md py-2.5 px-5 flex items-center text-lg space-x-3">
                 <span>Register</span> <FaAngleRight />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
