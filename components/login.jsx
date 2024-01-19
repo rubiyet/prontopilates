@@ -20,7 +20,7 @@ export default function Login() {
         </div>
         <div className="grid grid-cols-2 gap-12 p-10 border shadow">
           <div className="flex flex-col space-y-8">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-4">
               <span className="text-[22px] leading-[25px] text-[#330f2f]">
                 Log in
               </span>
