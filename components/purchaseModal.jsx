@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useRouter } from "next/router";
 import { BiShareAlt } from "react-icons/bi";
 import { FaAngleRight } from "react-icons/fa6";
@@ -8,6 +9,16 @@ export default function PurchaseModal({
 }) {
 
   const router = useRouter();
+  const [promoCode, setPromoCode] = useState("");
+  const [showShareText, setShowShareText] = useState(false);
+
+  const handleShareClick = () => {
+    setShowShareText(true);
+    navigator.clipboard.writeText(window.location.href);
+    setTimeout(() => {
+      setShowShareText(false);
+    }, 2000);
+  }
   
   return (
     <div
@@ -17,15 +28,20 @@ export default function PurchaseModal({
     >
       <div className="w-[400px]">
         <div className="h-[120px] bg-[#5B6391] flex items-center justify-end p-5">
-          <div className="text-[#5B6391] bg-white p-3 rounded-full text-2xl">
+        {showShareText && (
+        <span className="text-[#5B6391] bg-white p-3 rounded-l-full">
+          Link copied to clipboard
+        </span>
+      )}
+          <button className={`text-[#5B6391] bg-white p-3 ${showShareText ? "rounded-r-full" : "rounded-full"} text-2xl cursor-pointer`} onClick={handleShareClick} >
             <BiShareAlt />
-          </div>
+          </button>
         </div>
         <div className="h-[550px] bg-white p-8 overflow-auto flex flex-col space-y-5">
           <span className="text-[30px] font-bold leading-[35px] text-[#330F2F]">
             Pronto Casual
           </span>
-          <span className="text-md text-[#330F2F]">
+          <span className="text-md text-[#330F2F] font-medium">
             5 classes/mo. ($11/class). 23 classes daily. No loin.
           </span>
 
@@ -40,10 +56,14 @@ export default function PurchaseModal({
           <div className="flex space-x-2">
             <input
               type="text"
+              value={promoCode}
+              onChange={(e) => setPromoCode(e.target.value)}
               placeholder="Enter Promo Code here"
               className="w-full border border-[#adb1c8] rounded-md py-1.5 px-3 italic focus:outline-none"
             />
-            <button className="text-[#adb1c8] rounded-md px-6 py-1.5 border-[#adb1c8] border">
+            <button
+            disabled={!promoCode}
+             className="text-[#adb1c8] rounded-md px-6 py-1.5 border-[#adb1c8] border">
               Apply
             </button>
           </div>
